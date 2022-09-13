@@ -8,12 +8,12 @@ import { AboutComponent} from './about/about.component';
 
 const routes: Routes = [
   {
-    path:'characters',
-    component: CharactersComponent
+    path:'',
+    component: HomeComponent
   },
   {
-    path:'home',
-    component: HomeComponent
+    path:'characters',
+    component: CharactersComponent
   },
   {
     path:'about',
