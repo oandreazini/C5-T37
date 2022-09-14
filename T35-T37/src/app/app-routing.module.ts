@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
 import { HomeComponent} from './home/home.component';
 import { AboutComponent} from './about/about.component';
+import { MoreInfoComponent } from './more-info/more-info.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'about',
     component: AboutComponent
+  },
+  {
+    path:'moreInfo/:id',
+    component: MoreInfoComponent
   }
 ];
 
