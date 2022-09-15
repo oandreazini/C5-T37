@@ -1,0 +1,35 @@
+<div>
+  <div class="list-row">
+    <div class="col-md-4">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by ID" [(ngModel)]="id" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="getCharacter(id)">Search</button>
+        </div>
+      </div>
+    </div>
+
+  <h4>Character</h4>
+  <div *ngIf="currentCharacter.id != null; else waiting" class="edit-form">
+    <form>
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="currentCharacter.name" name="name">
+        <label for="status">Estado</label>
+        <input type="text" class="form-control" id="status" [(ngModel)]="currentCharacter.status" name="status">
+        <label for="species">Especie</label>
+        <input type="text" class="form-control" id="species" [(ngModel)]="currentCharacter.species" name="species">
+        <label for="gender">Genero</label>
+        <input type="text" class="form-control" id="gender" [(ngModel)]="currentCharacter.gender" name="gender">
+        <label for="origin">Origen</label>
+        <input type="text" class="form-control" id="origin" [(ngModel)]="currentCharacter.origin" name="origin">
+        <label for="image">Imagen</label>
+        <input type="text" class="form-control" id="image" [(ngModel)]="currentCharacter.image" name="image">
+      </div>
+    </form>
+    <button type= "submit" class="btn-primary" (click)="updateCharacter()">Update</button>
+    <button class="bt badge-danger" (click)="deleteCharacter()">Delete</button>
+  </div>
+</div>
+<ng-template #waiting>Loading...</ng-template>
+
