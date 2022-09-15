@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
-import { CharactersService } from '../characters.service';
+import { CharactersService } from '../services/characters.service';
 
 @Component({
   selector: 'app-more-info',
@@ -17,7 +17,7 @@ export class MoreInfoComponent implements OnInit {
 
   ngOnInit() {
     this.charactersService
-      .giveInfo(this.id)
+      .get(this.id)
       .subscribe((result) => (this.characters = result));
   }
 }
