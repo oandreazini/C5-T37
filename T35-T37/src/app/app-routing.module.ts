@@ -8,6 +8,10 @@ import { AboutComponent} from './about/about.component';
 import { MoreInfoComponent } from './more-info/more-info.component';
 import { AddCharcatersComponent } from './add-charcaters/add-charcaters.component';
 import { ModifiCharacterComponent } from './modifi-character/modifi-character.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 const routes: Routes = [
   {
@@ -33,7 +37,28 @@ const routes: Routes = [
   {
     path:'moreInfo/:id',
     component: MoreInfoComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
+  },
+  {
+    path:'user',
+    component: BoardUserComponent
+  },
+  {
+    path:'admin',
+    component: BoardAdminComponent
+  },
+  {
+    path: '',
+    redirectTo:'home', pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

@@ -12,6 +12,11 @@ import { MoreInfoComponent } from './more-info/more-info.component';
 import { AddCharcatersComponent } from './add-charcaters/add-charcaters.component';
 import { ModifiCharacterComponent } from './modifi-character/modifi-character.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,11 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     MoreInfoComponent,
     AddCharcatersComponent,
-    ModifiCharacterComponent
+    ModifiCharacterComponent,
+    LoginComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
